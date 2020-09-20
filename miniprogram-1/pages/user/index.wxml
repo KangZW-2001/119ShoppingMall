@@ -1,0 +1,65 @@
+<!-- 个人中心头部内容 -->
+<view class="user_info_wrap">
+    <!-- 头像及背景展示 -->
+    <view wx:if="{{userInfo.avatarUrl}}" class="user_img_wrap">
+        <image class="user_bg" src="{{userInfo.avatarUrl}}"></image>
+        <view class="user_info">
+            <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+            <view class="user_name">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+    <!-- 登录按钮 -->
+    <view wx:else class="user_btn">
+        <view>登录</view>          
+        <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo"></button>
+    </view>
+</view>
+<!-- 个人中心具体选项 -->
+<view class="user_content">
+    
+    <view class="user_main">
+        <!-- 我的钱包 -->
+        <view class="my_money">
+            <view class="current_money">当前余额：{{currentMoney}}</view>
+            <view class="charge">充值</view>
+        </view>
+        <!-- 我的订单 -->
+        <view class="orders_wrap">
+            <view class="orders_title">
+                我的订单
+            </view>
+            <view class="order_content">
+                <navigator url="../../pages/order/index?nick_name={{userInfo.nickName}}&state=0">
+                    <view class="iconfont icon-dingdanzhihangqingkuang"></view>
+                    <view class="order_name">全部订单</view>
+                </navigator>
+                <navigator url="../../pages/order/index?nick_name={{userInfo.nickName}}&state=2"> 
+                    <view class="iconfont icon-kucuntiaochu"></view>
+                    <view class="order_name">待发货</view>
+                </navigator>
+                <navigator url="../../pages/order/index?nick_name={{userInfo.nickName}}&state=3">
+                    <view class="iconfont icon-fayun"></view>
+                    <view class="order_name">配送中</view>
+                </navigator>
+                <navigator url="../../pages/order/index?nick_name={{userInfo.nickName}}&state=4">
+                    <view class="iconfont icon-zhuangchejilu"></view>
+                    <view class="order_name">已送达</view>
+                </navigator>
+                <navigator url="../../pages/order/index?nick_name={{userInfo.nickName}}&state=5"> 
+                    <view class="iconfont icon-wangongzhijian"></view>
+                    <view class="order_name">已完成</view>
+                </navigator>
+            </view>
+        </view>
+        <!-- 应用信息 -->
+        <view class="app_info_wrap">
+            <view>联系客服</view>
+            <button open-type="contact"></button>
+        </view>
+        <!-- 推荐 -->
+        <view class="recommend_wrap">
+            <view>分享本应用</view>
+            <button open-type="share"></button>
+        </view>
+    </view>
+</view>

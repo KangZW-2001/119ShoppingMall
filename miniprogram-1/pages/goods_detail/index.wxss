@@ -1,0 +1,83 @@
+/* pages/goos_detail/index.wxss */
+page {
+  padding-bottom: 90rpx;
+  background-color: #edece8;
+}
+.detail_swiper swiper {
+  height: 100vw;
+  text-align: center;
+  padding: 20rpx;
+}
+.detail_swiper swiper image {
+  width: 100%;
+  border-radius: 40rpx;
+}
+.good_info_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.good_info_title .good_price {
+  flex: 1;
+  padding: 15rpx;
+  font-size: 48rpx;
+  font-weight: 600;
+  color: red;
+}
+.good_info_title .good_name {
+  flex: 5;
+  color: black;
+  font-size: 38rpx;
+  font-weight: 600;
+  padding: 0 10rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.good_info .good_info_tt {
+  font-size: 32rpx;
+  color: var(--themeColor);
+  font-weight: 600;
+  padding: 20rpx;
+}
+.btm_tool {
+  border-top: 1rpx solid #ccc;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+}
+.btm_tool .tool_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #88ada6;
+  color: white;
+  font-size: 24rpx;
+  position: relative;
+}
+.btm_tool .tool_item button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.btm_tool .btn_cart {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #6b6882;
+  color: white;
+  font-size: 30rpx;
+  font-weight: 600;
+}

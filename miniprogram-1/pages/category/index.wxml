@@ -1,0 +1,45 @@
+<view class="cates">
+    <!--商品分类页面-上部搜索框组件-->
+    <SearchInput></SearchInput>
+    <!--商品分类主体-->
+    <view class="cates_container">
+        <!--左侧一级菜单-->
+            <!--页面滚动组件 scroll-view
+                scroll-x    允许横向滚动
+                scroll-u    允许纵向滚动
+                scroll-top  设置竖向滚动条位置
+                scroll-left 设置横向滚动条位置
+            -->
+        <view class="left_menu">
+            <view 
+            class="menu_item {{index1===currentIndex?'active':''}}"
+            wx:for="{{leftMenuList}}"
+            wx:key="cat1_id"
+            wx:for-item="item1"
+            wx:for-index="index1"
+            bindtap="handleItemTap"
+            data-index="{{index1}}"
+            >
+                <text>{{item1}}</text>
+            </view>
+        </view>
+            
+        <!--右侧二级菜单-->
+        <view class="right_content">
+            <view class="goods_list">
+                <navigator
+                wx:for="{{rightContent}}"
+                wx:key="cat2_id"
+                wx:for-item="item2"
+                wx:for-index="index2"
+                url="/pages/goods_list/index?keyword=undefined&cat1_id=0&cat2_id={{item2.cat2_id}}&is_discut=0&is_groupbuy=0&is_new=0"
+                >
+                    <image src="{{item2.cat2_pic_src}}" mode="widthFix"></image>
+                    <view class="goods_name">
+                        <text>{{item2.cat2_name}}</text>
+                    </view>
+                </navigator>                      
+            </view>
+        </view>
+    </view>
+</view>

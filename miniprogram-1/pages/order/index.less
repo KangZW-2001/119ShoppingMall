@@ -1,0 +1,74 @@
+/* pages/order/index.wxss */
+.order_guide{
+    background-color: #fff;
+    display: flex;
+    padding: 10rpx 0;
+    border-bottom: 1rpx solid #ccc;
+    .order_type{
+        text-align: center;
+        flex: 1;
+        color: var(--themeColor);
+        font-size: 30rpx;
+    }
+    .active{
+        font-weight: 600;
+    }
+}
+
+.order_list{
+    display: flex;
+    flex-direction: column;
+    padding: 10rpx;
+    .order_item{
+        display: flex;
+        flex-direction: column;
+        padding: 10rpx;
+        border: 1rpx solid #ccc;
+        .order_id{
+            color: var(--themeColor);
+            font-size: 35rpx;
+            font-weight: 600;
+            padding-bottom: 5rpx;
+            border-bottom: 1rpx solid #ccc;
+        }
+        .goods_item{
+            display: flex;
+            flex-direction: row;
+            color: var(--themeColor);
+            padding: 5rpx;
+            border-bottom: 1rpx solid #ccc;
+            justify-content: center;
+            text-align: center;
+            .goods_name{
+                flex: 5;
+                text-align: left;
+            }
+            .goods_num{
+                flex: 2;
+            }
+            .goods_price{
+                flex: 3;
+            }
+        }
+        .order_info{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            padding: 10rpx;
+            .order_info_date{
+                flex: 5;
+                text-align: left;
+            }
+            .order_info_num{
+                flex: 2;
+            }
+            .order_info_price{
+                flex: 3;
+                color: red;
+                font-size: 36rpx;
+                font-weight: 600;
+            }
+        }
+    }
+}

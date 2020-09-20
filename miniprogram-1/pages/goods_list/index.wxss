@@ -1,0 +1,55 @@
+/* pages/goods_list/index.wxss */
+page {
+  background-color: #edece8;
+}
+.good_list {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+.good_list .good_item {
+  background-color: white;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx;
+  border-radius: 30rpx;
+}
+.good_list .good_item .good_img_wrap {
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+  height: 30vw;
+}
+.good_list .good_item .good_img_wrap image {
+  height: 100%;
+  width: 100%;
+  border-radius: 20rpx;
+}
+.good_list .good_item .good_info_wrap {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.good_list .good_item .good_info_wrap .good_name {
+  flex: 2;
+  text-align: left;
+  justify-self: center;
+  font-size: 40rpx;
+  font-weight: 550;
+  color: var(--themeColor);
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.good_list .good_item .good_info_wrap .good_price {
+  flex: 1;
+  text-align: right;
+  color: red;
+  font-size: 50rpx;
+  font-weight: 600;
+}
+.good_empty {
+  color: red;
+}

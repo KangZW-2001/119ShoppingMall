@@ -1,0 +1,146 @@
+/* pages/user/index.wxss */
+page{
+    background-color:#edece8;
+}
+.user_info_wrap{
+    height: 45vh;
+    overflow: hidden;
+    background-color: var(--themeColor);
+    position: relative;
+    .user_img_wrap{
+        position: relative;
+        .user_bg{
+            height: 48vh;
+            //添加高斯模糊
+            filter: blur(10rpx);
+        }
+    
+        .user_info{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 25%;
+            text-align: center;
+            .user_icon{
+                width: 200rpx;
+                height: 200rpx;
+                border-radius: 50%;
+            }
+            .user_name{
+                color: #fff;
+                margin-top: 35rpx;
+                font-size: 40rpx;
+                font-weight: 600;
+            }  
+        }
+    }
+    .user_btn{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top:35%;
+        border: 1rpx solid white;
+        color:white;
+        font-size: 38rpx;
+        padding: 30rpx;
+        border-radius: 10rpx;
+        button{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity:0;
+        }
+    }
+}
+.user_content{
+    position: relative;
+    
+    .user_main{
+        color: #666;
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -20rpx;
+        padding-bottom: 100rpx;
+        //余额栏样式
+        .my_money{
+            background-color: #fff;
+            margin-top: -10rpx;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20rpx;
+            .current_money{
+                flex: 1;
+                text-align: center;
+                border-right: 1rpx solid #edece8;
+            }
+            .charge{
+                flex: 1;
+                text-align: center;
+            }
+        }
+        //订单栏样式
+        .orders_wrap{
+            background-color: #fff;
+            margin-top: 30rpx;
+            .orders_title{
+                padding: 15rpx;
+                border-bottom: 1rpx solid #edece8;
+            }
+            .order_content{
+                display: flex;
+                navigator{
+                    padding: 15rpx 0;
+                    flex:1;
+                    text-align: center;
+                    .iconfont{
+                        color: var(--themeColor);
+                        font-size: 50rpx;
+                    }
+                    .order_name{
+                        padding: 5rpx 0;
+                        font-size: 25rpx;
+                    }
+                }
+            }            
+        }
+        .address_wrap{
+            margin-top: 30rpx;
+            background-color: #fff;
+            padding: 20rpx;
+        }
+        .app_info_wrap{
+            margin-top: 30rpx;
+            background-color: #fff;
+            padding: 20rpx;
+            position: relative;
+            button{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity:0;
+            }
+        }
+        .recommend_wrap{
+            margin-top: 30rpx;
+            background-color: #fff;
+            padding: 20rpx;
+            position: relative;
+            button{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity:0;
+            }
+        }
+    }
+}

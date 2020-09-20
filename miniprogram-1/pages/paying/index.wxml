@@ -1,0 +1,17 @@
+<block wx:if="{{currentMoney>=totalPrice}}">
+    <view class="money_enough">
+        <view class="money_pay_title">
+            <text>您共计购买了{{num}}件商品，需要支付{{totalPrice}}元</text>
+        </view>
+        <button class="pay_button" bindtap="handlePaying">支付</button>  
+    </view>   
+</block>
+
+<block wx:else>
+    <view class="money_disenough">
+        <view class="money_pay_title">
+            您的余额不足，请充值
+        </view>
+    </view>
+</block>
+  
