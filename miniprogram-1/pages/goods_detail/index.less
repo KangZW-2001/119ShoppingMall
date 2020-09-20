@@ -1,0 +1,99 @@
+/* pages/goos_detail/index.wxss */
+page{
+    //应与底部工具栏保持一致
+    padding-bottom: 90rpx;
+    background-color: #edece8;
+}
+
+//轮播图样式
+.detail_swiper{
+    swiper{
+        height: 100vw;
+        text-align: center;
+        padding: 20rpx;
+        image{
+            width: 100%;
+            border-radius: 40rpx;
+        }
+    }
+}
+
+//商品标题样式
+.good_info_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .good_price{
+        flex: 1;
+        padding: 15rpx;
+        font-size: 48rpx;
+        font-weight: 600;
+        color:red;
+    }
+    .good_name{
+        flex:5;
+        color:black;
+        font-size: 38rpx;
+        font-weight: 600;
+        padding: 0 10rpx;
+        //多出部分省略
+        display: -webkit-box;
+        overflow:hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }    
+}
+
+//商品详情样式
+.good_info{
+    .good_info_tt{
+        font-size: 32rpx;
+        color: var(--themeColor);
+        font-weight: 600;
+        padding: 20rpx;
+    }
+    .good_info_content{
+        
+    }
+}
+//底部工具栏样式
+.btm_tool{
+    border-top: 1rpx solid #ccc ;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    .tool_item{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #88ada6;
+        color: white;
+        font-size: 24rpx;
+        position: relative;
+        button{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity:0;
+        }
+    }
+    .btn_cart{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #6b6882;
+        color: white;
+        font-size: 30rpx;
+        font-weight: 600;
+    }
+}

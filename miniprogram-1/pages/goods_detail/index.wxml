@@ -1,0 +1,53 @@
+<!--商品详情页-顶部轮播图-->
+<view class="detail_swiper">
+    <swiper
+    autoplay
+    circular
+    indicator-dots
+    >
+        <swiper-item
+        wx:for="{{goodObj.pics}}"
+        bindtap="handlePreviewImage"
+        data-url="{{item.image_src}}"
+        >
+            <image src="{{item.image_src}}" mode="widthFix"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<!--商品详情页-商品主信息-->
+<view class="good_info_title">
+    <view class="good_name">{{goodObj.good_name}}</view>
+    <view class="good_price">￥{{goodObj.good_price}}</view>
+</view>
+<!--商品详情页-图文详情-->
+<view class="good_info">
+    <view class="good_info_tt">图文详情</view>
+    <view class="good_info_content">
+        <!--富文本-->
+        <rich-text nodes="{{goodObj.good_introduce}}"></rich-text> 
+    </view>
+</view>
+<!--商品详情页-底部工具栏-->
+<view class="btm_tool">
+    <!--客服按钮-->
+    <view class="tool_item">
+        <view class="iconfont icon-kefu"></view>
+        <view>客服</view>
+        <button open-type="contact"></button>
+    </view>
+    <!--分享按钮-->
+    <view class="tool_item">
+        <view class="iconfont icon-faxian"></view>
+        <view>分享</view>
+        <button open-type="share"></button>
+    </view>
+    <!--购物车按钮-->
+    <navigator open-type="switchTab" url="/pages/cart/index" class="tool_item">
+        <view class="iconfont icon-gouwuche"></view>
+        <view>购物车</view>
+    </navigator>
+    <!--加购按钮-->
+    <view class="tool_item btn_cart" bindtap="handleCartAdd">
+        加入购物车
+    </view>
+</view>

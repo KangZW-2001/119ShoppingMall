@@ -1,0 +1,10 @@
+<view class="search_input">
+    <input placeholder="请输入关键字" bindinput="handleInput"></input>
+    <view class="searchStart">
+        <navigator url="/pages/goods_list/index?keyword={{keyword}}&cat1_id=0&cat2_id=0&is_discut=0&is_groupbuy=0&is_new=0" open-type="navigate">
+        搜 索
+        </navigator> 
+    </view>         
+</view>
+  
+  

@@ -1,0 +1,2 @@
+1.miniprograms-1文件夹下为小程序代码
+2.shoppingMall_119文件夹下为服务器代码

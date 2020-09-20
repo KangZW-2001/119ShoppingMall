@@ -1,0 +1,28 @@
+<SearchInput></SearchInput>
+
+<block wx:if="{{goodList}}">
+    <!-- 商品条目 -->
+    <view class="good_list">
+        <navigator class="good_item"
+        wx:for="{{goodList}}"
+        wx:key="good_id"
+        url="/pages/goods_detail/index?good_id={{item.good_id}}"
+        >
+            <!--左侧 图片容器-->
+            <view class="good_img_wrap">
+                <image src="{{item.image_src?item.image_src:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599662905071&di=334d221ee03e770ff0650baad456e832&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F01%2F31%2F68%2F94573b4e1f9d684.jpg'}}"></image>
+            </view>
+            <!--右侧 商品容器--> 
+            <view class="good_info_wrap">
+                <view class="good_name">{{item.good_name}}</view>
+                <view class="good_price">￥{{item.good_price}}</view>
+            </view>
+        </navigator>
+    </view>
+</block>
+<block wx:else>
+    <view class="good_empty">
+        没有找到商品
+    </view>
+</block>
+  

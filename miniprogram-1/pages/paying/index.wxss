@@ -1,0 +1,34 @@
+/* pages/paying/index.wxss */
+.money_enough {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  margin-top: 100rpx;
+}
+.money_enough .money_pay_title {
+  margin-top: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 38rpx;
+  font-weight: 600;
+}
+.money_enough .pay_button {
+  margin-top: 100rpx;
+}
+.money_disenough {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  margin-top: 100rpx;
+}
+.money_disenough .money_pay_title {
+  margin-top: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 38rpx;
+  font-weight: 600;
+}

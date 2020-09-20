@@ -1,9 +1,0 @@
-<view class="search_input">
-    <navigator url="/pages/search/index" open-type="navigate">
-        <view>
-            搜一下 
-        </view>
-    </navigator>      
-</view>
-  
-  

@@ -1,0 +1,66 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/category/index",
+    "pages/goods_list/index",
+    "pages/goods_detail/index",
+    "pages/cart/index",
+    "pages/order/index",
+    "pages/search/index",
+    "pages/user/index",
+    "pages/pay/index",
+    "pages/paying/index"
+  ],
+  
+ 
+  "window":{
+    "enablePullDownRefresh": true, 
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#725e82",
+    "navigationBarTitleText": "诚园小商城",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#6b6882"
+  },
+ 
+  "style": "v2",
+
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#725e82",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/index.png",
+        "selectedIconPath": "icon/index-o.png"
+      },
+
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "icon/category.png",
+        "selectedIconPath": "icon/category-o.png"
+      },
+
+      {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "icon/cart.png",
+        "selectedIconPath": "icon/cart-o.png"
+      },
+
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icon/user.png",
+        "selectedIconPath": "icon/user-o.png"
+      }
+    ]    
+  },
+
+  
+  "sitemapLocation": "sitemap.json"
+}

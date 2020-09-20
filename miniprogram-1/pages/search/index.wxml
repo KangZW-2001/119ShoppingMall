@@ -1,0 +1,21 @@
+<SearchInput></SearchInput>
+<view class="search_row">
+    <input placeholder="请输入关键字" bindinput="handleInput"></input>
+    <button>取消</button>
+</view>
+<view class="search_content">
+    <view class="search_item">
+        fasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+    </view>
+    <view class="search_item">
+        fasddddddddddddddddddddddddddddddddddddddd
+    </view>
+    <view class="search_item">
+        fasddddddddddddddddddddddddddddddddddddddd
+    </view>
+    <view class="search_item">
+        fasddddddddddddddddddddddddddddddddddddddd
+    </view>
+</view>
+
+  

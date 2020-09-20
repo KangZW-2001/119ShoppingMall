@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class = "cysc_index">
+  <!-- 搜索框 开始-->
+  <SearchInput></SearchInput>
+  <!--搜索框 结束-->
+
+  <!--轮播图 开始-->
+  <view class="index_swiper">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item
+      wx:for="{{swiperList}}"
+      wx:key="good_id"
+      >
+        <navigator url="/pages/goods_detail/index?good_id={{item.good_id}}">
+          <image src="{{item.image_src}}" mode="widthFix">
+          </image>
+        </navigator>          
+      </swiper-item>
+    </swiper>      
+  </view>  
+  <!--轮播图 结束-->
+
+  <!--活动 开始-->
+  <view class="index_activity">
+    <view class="index_activity_title">最新活动</view>
+    <view class="index_activity_item">
+      <navigator
+      url="/pages/goods_list/index?keyword=undefined&cat1_id=0&cat2_id=0&is_discut={{index===2?1:0}}&is_groupbuy={{index===0?1:0}}&is_new={{index===1?1:0}}"
+      wx:for="{{activityList}}"
+      wx:key="cat2_id"
+      >
+        <image src="{{item.image_src}}" mode="widthFix"></image>
+        <text>{{index===0?"团购促销":""}}{{index===1?"今日上新":""}}{{index===2?"折扣优惠":""}}</text>
+      </navigator>
+    </view>    
+  </view>
+  <!--活动 结束-->
+
+  <!--商品展示 开始-->
+  <view class="index_show">
+    <view class="show_title">热门商品</view>
+    <navigator
+    wx:for="{{showList}}"
+    wx:key="good_id"
+    url="/pages/goods_detail/index?good_id={{item.good_id}}"
+    >
+      <view class="show_good_pic">
+        <image src="{{item.image_src}}"></image>
+      </view>
+      <view class="show_good_info">
+        <view class="show_good_name">{{item.good_name}}</view>
+        <view class="show_good_price">￥{{item.good_price}}</view>
+      </view>     
+    </navigator>
+  </view>
+  <!--商品展示 结束-->
+</view>
+  
